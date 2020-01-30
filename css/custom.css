@@ -1,0 +1,161 @@
+.dark-gold {color: #8E793E}
+.light-gold {color: #AD974F}
+.intellectual-grey {color: #231F20}
+.light-grey {color: #EAEAEA}
+
+/* Add the below transitions to allow a smooth color change similar to lyft */
+.navbar {
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+
+}
+
+.navbar.scrolled {
+    background: rgb(255, 255, 255); /* IE */
+    background: rgba(255, 255, 255); /* NON-IE */
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+}
+
+.logo{
+    color:#AD974F; 
+}
+.logo:hover{
+    color:#8E793E; 
+}
+
+.nav-link{
+    color:#AD974F; 
+}
+.nav-link:hover{
+    color:#8E793E; 
+}
+
+.jumbotron{
+
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url(/img/jumbotron-header.jpg);
+    background-size: cover;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    height: 100%;
+
+
+}
+
+.skills-list{
+    list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+
+.portfolio{
+    color:#AD974F;
+}
+.about-me{
+    color:#AD974F;
+}
+#about-me{
+    margin-bottom: 32px;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+}
+.icon-angle-down{
+    font-size: 50px;
+}
+img.img-thumbnail {
+    padding: 0;
+    background-color: #fff;
+    border: .1rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #AD974F;
+    border-radius: .2rem;
+    max-width: 100%;
+    height: auto;
+    margin:.25em;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    font-size: 16px;
+    color: #AD974F;
+    text-align: center
+}
+.content:hover .centered{
+    visibility: visible; 
+}
+.content:hover img{
+    opacity: 0.1;
+
+}
+
+.portfolio-icon{
+    padding:5px;
+    bottom: 0;
+}
+.portfolio-a{
+    border-color: #8E793E};
+    color: #AD974F;
+    text-decoration: none;
+}
+.portfolio-a:link {
+    color: #AD974F;
+    text-decoration: none;
+}
+
+.portfolio-a:visited {
+    color: #AD974F;
+    text-decoration: none;
+}
+
+.portfolio-a:hover {
+    color: #AD974F;
+    text-decoration: none;
+
+}
+
+.portfolio-a:active {
+    color: #AD974F;
+    text-decoration: none;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    width: 75%;
+}
+
+.contact-links:link {
+    color: #231F20;
+    text-decoration: none;
+}
+
+.contact-links:visited {
+    color: #231F20;
+    text-decoration: none;
+}
+
+.contact-links:hover {
+    color: #231F20;
+    text-decoration: none;
+
+}
+
+.contact-links:active {
+    color: #231F20;
+    text-decoration: none;
+}
+
+
