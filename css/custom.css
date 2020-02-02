@@ -199,6 +199,8 @@ button.btn:active, a.btn:active {
     .jumbotron{
         background-position: center;
     }
+.navbar-toggler {
 
+ }
 }
 
