@@ -59,6 +59,10 @@
 #about-me{
     margin-bottom: 32px;
 }
+#portfolio{
+    margin-bottom: 32px;
+}
+
 
 .vertical-center {
     min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -157,30 +161,44 @@ hr {
     color: #231F20;
     text-decoration: none;
 }
-a.btn{
+button.btn, a.btn{
     border-color: #8E793E;
     height: auto;
     width: 80px;
 }
 
-a.btn:link{
+button.btn:link, a.btn:link{
 
     text-decoration: none;  
 }
 
-a.btn:visited {
+button.btn:visited, a.btn:visited {
 
     text-decoration: none;
 }
 
-a.btn:hover {
+button.btn:hover, a.btn:hover {
     opacity: 0.6;
     text-decoration: none;
 
 }
 
-a.btn:active {
+button.btn:active, a.btn:active {
     text-decoration: none;
 }
 
+.hidden {
+    display: none;
+}
+
+#loadmore{
+    width: 120px;
+}
+
+@media (max-width: 1024px) {
+    .jumbotron{
+        background-position: center;
+    }
+
+}
 
