@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Tic Tac Toe</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
+        <script src="js/scripts.js"></script>
+
+    </head>
+
+    <body>
+
+
+        <!-- Page Content -->
+        <div class="container-fluid">
+            <div class="justify-content-center">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>Tic Tac Toe</h1>
+                        <p class="lead">Amazing game</p>
+                        <p class="lead">Wynik:</p>
+                        <p id="result">Wygrał gracz: </p>
+                        <div class="row justify-content-center">
+                            <div class="col text-center score">
+                                <div class="row justify-content-center">
+                                    <p>X= </p>
+                                    <p id="score-x"></p>
+                                </div>
+                            </div>
+                            <div class="col text-center score">
+                                <div class="row justify-content-center">
+                                    <p>Remis= </p>
+                                    <p id="score-draw"></p>
+                                </div>
+                            </div>
+                            <div class="col text-center score">
+                                <div class="row justify-content-center">
+                                    <p>Y= </p>
+                                    <p id="score-y"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="button-reset btn btn-danger" onClick="reset();">RESET</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col text-center">
+                        <button id="buttonOne" class="button btn btn-light border" value="emptyOne" onClick="toggleText(this.id); logicOfGame();"></button>
+                    </div>
+                    <div class="col text-center">
+                        <button id="buttonTwo" class="button btn btn-light border" value="emptyTwo" onClick="toggleText(this.id); logicOfGame();"></button>
+                    </div>
+                    <div class="col text-center">
+                        <button id="buttonThree" class="button btn btn-light border" value="emptyThree" onClick="toggleText(this.id); logicOfGame();"></button>
+                    </div>                
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col text-center">
+                        <button id="buttonFour" class="button btn btn-light border" value="emptyFour" onClick="toggleText(this.id); logicOfGame();"></button>
+                    </div>
+                    <div class="col text-center">
+                        <button id="buttonFive" class="button btn btn-light border" value="emptyFive" onClick="toggleText(this.id); logicOfGame();"></button>
+                    </div>
+                    <div class="col text-center">
+                        <button id="buttonSix" class="button btn btn-light border" value="emptySix" onClick="toggleText(this.id); logicOfGame();"></button>
+                    </div>                
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col text-center">
+                        <button id="buttonSeven" class="button btn btn-light border" value="emptySeven" onClick="toggleText(this.id); logicOfGame();"></button>
+                    </div>
+                    <div class="col text-center">
+                        <button id="buttonEight" class="button btn btn-light border" value="emptyEight" onClick="toggleText(this.id); logicOfGame();"></button>
+                    </div>
+                    <div class="col text-center">
+                        <button id="buttonNine" class="button btn btn-light border" value="emptyNine" onClick="toggleText(this.id); logicOfGame();"></button>
+                    </div>                
+                </div>
+                <div class="row justify-content-center menu">
+                    <div class="text-center">
+                        <a class="btn btn-info back-button" href="/">BACK</a>
+                    </div>
+                    <div class="text-center">
+                        <a class="btn btn-info back-button" href="https://github.com/WojciechKuc/Tic-Tac-Toe" target="_blank">GITHUB</a>
+                    </div>             
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.slim.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>
