@@ -195,12 +195,20 @@ button.btn:active, a.btn:active {
     width: 120px;
 }
 
+.live-demo{
+    position: absolute;
+    font-size: 10px;
+    top:5px;
+    left:220px;
+    color:black;
+}
+
 @media (max-width: 1024px) {
     .jumbotron{
         background-position: center;
     }
-.navbar-toggler {
+    .navbar-toggler {
 
- }
+    }
 }
 

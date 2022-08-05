@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+        <title>Rock Paper Scissors</title>
+    </head>
+    <body>
+
+        <div class="container">
+            <img src="IMG/Logo.png" class="logo" alt="Rock Paper Scissors Logo">
+
+            <section class="buttons">
+                <button onclick="gameLogic(this.id)" type="button" class="btn btn-dark" id="rock">ROCK</button>
+                <button onclick="gameLogic(this.id)" type="button" class="btn btn-dark" id="scissors">SCISSORS</button>
+                <button onclick="gameLogic(this.id)" type="button" class="btn btn-dark" id="paper">PAPER</button>
+            </section>
+
+            <p id="result">&nbsp </p>
+            <section class="score">
+                <p id="player1">Player 1: </p><p id="player1Score"></p> 
+                <p id="draw">Draw: </p><p id="drawScore"></p>  
+                <p id="CPU">CPU: </p><p id="cpuScore"></p>
+            </section>
+                <div class="menu">
+                    <div class="text-center">
+                        <a class="btn btn-light back-button" href="/">BACK</a>
+                    </div>
+                    <div class="text-center">
+                        <a class="btn btn-light" href="https://github.com/WojciechKuc/Rock-Paper-Scissors" target="_blank">GITHUB</a>
+                    </div>             
+                </div>
+            </div>
+            
+            <script>
+
+                var p1 = 0, draw = 0, cpu = 0;
+                document.getElementById("player1Score").innerHTML=p1;
+                document.getElementById("drawScore").innerHTML=draw;
+                document.getElementById("cpuScore").innerHTML=cpu;
+
+
+                function gameLogic(clicked_id){
+
+                    console.log(clicked_id);
+                    document.getElementById("result").innerHTML = result(clicked_id);
+
+                }
+
+                function random() {
+                    return Math.floor((Math.random() * 3) + 1);
+                }
+
+                function result(clicked_id){
+                    var opponentMove = random();
+                    var opponent;
+                    console.log(opponentMove);
+                    switch (opponentMove) {
+                        case 1:
+                            console.log('rock');
+                            opponent = 'rock';
+                            return checkResult(clicked_id, opponent);
+                            break;
+                        case 2:
+                            console.log('paper');
+                            opponent = 'paper';
+                            return checkResult(clicked_id, opponent);
+                            break;
+                        case 3:
+                            console.log(`scissors`);
+                            opponent = 'scissors';
+                            return checkResult(clicked_id, opponent);
+                            break;
+                        default:
+                            console.log(`BŁĄD`);
+                    }
+                }
+
+
+
+                function checkResult(clicked_id, opponent){
+
+                    if (clicked_id==opponent) {
+                        console.log('remis');
+                        defineScore(++draw,'draw');
+                        /*document.getElementById("drawScore").innerHTML=draw;*/
+                        return 'DRAW';
+                    }
+                    else if (clicked_id=='rock' && opponent=='scissors'){
+                        console.log('You Won');
+                        defineScore(++p1,'win');
+                        return 'Opponent choose SCISSORS, You Won';}
+                    else if (clicked_id=='rock' && opponent=='paper'){
+                        console.log('You Lose');
+                        defineScore(++cpu,'lose');
+                        return 'Opponent choose PAPER, You Lose';}
+
+                    else if (clicked_id=='scissors' && opponent=='rock'){
+                        console.log('You Lose');
+                        defineScore(++cpu,'lose');
+                        return 'Opponent choosen ROCK, You Lose';}
+                    else if (clicked_id=='scissors' && opponent=='paper'){
+                        console.log('You Won');
+                        defineScore(++p1,'win');
+                        return 'Opponent choose PAPER, You Win';}
+
+                    else if (clicked_id=='paper' && opponent=='rock'){
+                        console.log('You Won');
+                        defineScore(++p1,'win');
+                        return 'Opponent choose ROCK, You Win';}
+                    else if (clicked_id=='paper' && opponent=='scissors'){
+                        console.log('You Lose');
+                        defineScore(++cpu,'lose');
+                        return 'Opponent choose SCISSORS, You Lose';}
+
+                }
+
+                function defineScore(result, state){
+                    if(state=='draw'){
+                        document.getElementById("drawScore").innerHTML=result;
+                    }
+                    else if(state=='win'){
+                        document.getElementById("player1Score").innerHTML=result;
+                    }
+                    else if(state=='lose'){
+                        document.getElementById("cpuScore").innerHTML=result;
+                    }
+                }
+
+
+
+
+            </script>
+            <!-- Optional JavaScript; choose one of the two! -->
+
+            <!-- Option 1: Bootstrap Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+            <!-- Option 2: Separate Popper and Bootstrap JS -->
+            <!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+-->
+            </body>
+        </html>
